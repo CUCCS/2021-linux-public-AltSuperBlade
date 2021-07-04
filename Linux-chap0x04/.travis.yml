@@ -1,12 +1,14 @@
 language: bash
 
 before_install:
-  - sudo apt install -y shellcheck p7zip-full imagemagick ghostscript 
+  - sudo apt-get update
+  - sudo apt-get upgrade
+  - sudo apt-get install -y shellcheck p7zip-full imagemagick ghostscript 
 
 script:
   - ls -l
   - shellcheck task1.sh
-  - echo task1
+  - echo Task1
   - bash task1.sh -h
   - bash task1.sh -q ./img 90
   - bash task1.sh -r ./img 90%
@@ -15,14 +17,14 @@ script:
   - bash task1.sh -s ./img Suf
   - bash task1.sh -t ./img
   - shellcheck task2.sh
-  - echo task2
+  - echo Task2
   - bash task2.sh -h
   - bash task2.sh -a
   - bash task2.sh -p
   - bash task2.sh -n
   - bash task2.sh -m
   - shellcheck task3.sh
-  - echo task3
+  - echo Task3
   - bash task3.sh -h
   - bash task3.sh -t
   - bash task3.sh -i
